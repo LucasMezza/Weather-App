@@ -1,0 +1,44 @@
+.cold{
+    height: 4vh;
+}
+
+.hot{
+    height: 6vh;
+}
+
+@media (max-width: 767px){
+    .direction{
+        flex-direction: column !important;
+        align-items: center;
+    }
+}
+
+.weather-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.temp{
+    font-size: 70px;
+}
+
+.search{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.637);
+    color: black;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    padding: .3rem 0;
+    font-weight: 600;
+}
+
+.btn-search{
+    background-color: #0d6efd;
+    color: black;
+    border: none;
+    font-weight: 600;
+    border-radius: 0 20px 20px 0;
+    padding: .3rem 1rem;
+}
