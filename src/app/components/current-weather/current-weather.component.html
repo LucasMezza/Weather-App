@@ -45,43 +45,232 @@
   </div>  
 </div> -->
 <div class="container text-center mb-3 mt-3">
-    <form action="">
-      <input class="search" type="text" placeholder="city search">
-      <button type="submit" class="btn-search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-      </svg></button>
-    </form>
-  </div>
-  
-  <div class="container">
-    <div class="card mb-3">
-      <div class="card-header">
-        <div class="weather-data bg-primary pt-4 pb-3 fw-bold">
-          <h4 class="card-title">Chivilcoy</h4>
-          <p class="temp">30 °C</p>
-        </div>
+  <form action="">
+    <input class="search" type="text" placeholder="city search" />
+    <button type="submit" class="btn-search">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-search"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+        />
+      </svg>
+    </button>
+  </form>
+</div>
+
+<div class="container">
+  <div class="card mb-3">
+    <div class="card-header">
+      <div class="weather-data pt-4 pb-3 fw-bold" id="blur">
+        <h4 class="card-title">Chivilcoy</h4>
+        <p>fri, jan 27</p>
+        <img src="../../../images/clima.jpg" class="weather" alt="weather">
+        <p class="temp">30<span class="degrees fs-3">°C</span></p>
       </div>
-      <div class="card-body">
-        <div class="d-flex flex-row direction justify-content-around fw-semibold fs-5">
-          <div class="row">
-            <div class="col-md-6 d-flex flex-row justify-content-center align-items-center mt-3">
-              <img src="../../../images/cold.png" alt="min temp" class="cold">
-              <p class="card-text ">Min Temp 23 °C</p>
-            </div>
-            <div class="col-md-6 d-flex flex-row justify-content-center align-items-center mt-3">
-            <img src="../../../images/hot.png" alt="max temp" class="hot">
+    </div>
+    <div class="card-body">
+      <div
+        class="d-flex flex-row direction justify-content-around fw-semibold fs-5"
+      >
+        <div class="row">
+          <div
+            class="col-md-6 d-flex flex-row justify-content-center align-items-center mt-3"
+          >
+            <img src="../../../images/cold.png" alt="min temp" class="cold" />
+            <p class="card-text">Min Temp 23 °C</p>
+          </div>
+          <div
+            class="col-md-6 d-flex flex-row justify-content-center align-items-center mt-3"
+          >
+            <img src="../../../images/hot.png" alt="max temp" class="hot" />
             <p class="card-text">Max Temp32 °C</p>
-            </div>
-            <div class="col-md-6 d-flex flex-row justify-content-center align-items-center mt-4 mb-3">
-              <img src="../../../images/humidity.png" alt="humidity" class="cold me-2">
-              <p class="card-text">Humidity 77%</p>
-            </div>
-            <div class="col-md-6 d-flex flex-row justify-content-center align-items-center mt-4 mb-3">
-              <img src="../../../images/wind.png" alt="speed wind" class="cold">
-              <p class="card-text">Speed Wind 77%</p>
-            </div>
+          </div>
+          <div
+            class="col-md-6 d-flex flex-row justify-content-center align-items-center mt-4 mb-3"
+          >
+            <img
+              src="../../../images/humidity.png"
+              alt="humidity"
+              class="cold me-2"
+            />
+            <p class="card-text">Humidity 77%</p>
+          </div>
+          <div
+            class="col-md-6 d-flex flex-row justify-content-center align-items-center mt-4 mb-3"
+          >
+            <img src="../../../images/wind.png" alt="speed wind" class="cold" />
+            <p class="card-text">Speed Wind 77%</p>
           </div>
         </div>
       </div>
-    </div>  
+      <div id="carouselExampleFade" class=" carousel carousel-fade slide mt-5">
+        <div class="carousel-inner">
+          <div class="container">
+          <div class="carousel-item active d-flex flex-row">
+              <div class="col">
+                <div class="card me-1 bg-carousel">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">11:00</h5>
+                    <img src="..." class="card-img" alt="" />
+                    <p class="card-text">
+                      29 °C
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card me-1 bg-carousel">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">14:00</h5>
+                    <img src="..." class="card-img" alt="" />
+                    <p class="card-text">
+                      31 °C
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card me-1 bg-carousel">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">17:00</h5>
+                    <img src="..." class="card-img" alt="" />
+                    <p class="card-text">
+                      34 °C
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card me-1 bg-carousel">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">20:00</h5>
+                    <img src="..." class="card-img" alt="" />
+                    <p class="card-text">
+                      36 °C
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="carousel-item  d-flex flex-row">
+              <div class="col">
+                <div class="card me-1 bg-carousel">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">23:00</h5>
+                    <img src="..." class="card-img" alt="" />
+                    <p class="card-text">
+                      29 °C
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card me-1 bg-carousel">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">2:00</h5>
+                    <img src="..." class="card-img" alt="" />
+                    <p class="card-text">
+                      29 °C
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card me-1 bg-carousel">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">5:00</h5>
+                    <img src="..." class="card-img" alt="" />
+                    <p class="card-text">
+                      31 °C
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card me-1 bg-carousel">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">8:00</h5>
+                    <img src="..." class="card-img" alt="" />
+                    <p class="card-text">
+                      34 °C
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+      <div class="container mt-5 mb-5">
+        <div class=" mt-2 text-center">
+          <div class="row">
+            <div class="col-md-4"><strong><p >Sunrise <br> 2pm</p></strong></div>
+            <div class="col-md-4"><img src="../../../images/sunset-sunrise.png" class="img-fluid" alt="sunrise-sunset"></div>
+            <div class="col-md-4"><strong><p >Sunset <br> 3pm</p></strong></div>
+          </div>
+        </div>
+      </div>
+
+    <div class="container">
+      <table class="table table-borderless mt-5 bg-forecast">
+        <tbody class="text-center">
+          <tr>
+            <th>Monday</th>
+            <th>77%</th>
+            <th><img src="../../../images/wind.png" alt="weather" class="img-fluid forecast"></th>
+            <th>12 °C</th>
+            <th>22 °C</th>
+          </tr>
+          <tr>
+            <th>Tuesday</th>
+            <th>32%</th>
+            <th><img src="../../../images/wind.png" alt="weather" class="img-fluid forecast"></th>
+            <th>15 °C</th>
+            <th>22 °C</th>
+          </tr>
+          <tr>
+            <th>Wednesday</th>
+            <th>1%</th>
+            <th><img src="../../../images/wind.png" alt="weather" class="img-fluid forecast"></th>
+            <th>18 °C</th>
+            <th>26 °C</th>
+          </tr>
+          <tr>
+            <th>Thursday</th>
+            <th>15%</th>
+            <th><img src="../../../images/wind.png" alt="weather" class="img-fluid forecast"></th>
+            <th>22 °C</th>
+            <th>28 °C</th>
+          </tr>
+          <tr>
+            <th>Friday</th>
+            <th>3%</th>
+            <th><img src="../../../images/wind.png" alt="weather" class="forecast"></th>
+            <th>24 °C</th>
+            <th>32 °C</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
+</div>
+

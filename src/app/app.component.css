@@ -1,14 +1,5 @@
-
 body {
-    background-image: url('../images/fondo.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    width: 100%;
-}
-#blur {
-    backdrop-filter: blur(10px) !important;
+    background-color: #00376b;
 }
 
 @media (max-width: 767px){
