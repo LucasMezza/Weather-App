@@ -6,6 +6,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     PageNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
