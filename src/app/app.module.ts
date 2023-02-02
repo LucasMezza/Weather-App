@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
@@ -13,8 +12,7 @@ import { HttpClientModule} from '@angular/common/http';
     AppComponent,
     NavComponent,
     FooterComponent,
-    CurrentWeatherComponent,
-    PageNotFoundComponent
+    CurrentWeatherComponent
   ],
   imports: [
     BrowserModule,
