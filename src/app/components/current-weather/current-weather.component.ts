@@ -12,9 +12,11 @@ export class CurrentWeatherComponent implements OnInit {
 
   cityName: string = 'Chivilcoy';
   weather: any;
+  forecast: any;
   
   ngOnInit() {
     this.getWeather(this.cityName);
+    this.cityName = '';
   }
 
   onSubmit(){
