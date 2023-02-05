@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { WeatherService } from 'src/app/service/weather.service';
 
 @Component({
@@ -6,37 +6,37 @@ import { WeatherService } from 'src/app/service/weather.service';
   templateUrl: './current-weather.component.html',
   styleUrls: ['./current-weather.component.css']
 })
-export class CurrentWeatherComponent implements OnInit {
+export class CurrentWeatherComponent{
 
   constructor(private wetherService: WeatherService) { }
 
-  cityName: string = 'Chivilcoy';
-  weather: any;
-  forecast: any;
+  // cityName: string = 'Chivilcoy';
+  // weather: any;
+  // forecast: any;
   
-  ngOnInit() {
-    this.getWeather(this.cityName);
-    this.cityName = '';
-  }
+  // ngOnInit() {
+  //   this.getWeather(this.cityName);
+  //   this.cityName = '';
+  // }
 
-  onSubmit(){
-    if(this.cityName){
-      this.getWeather(this.cityName);
-      this.cityName = '';
-    }
-    else{
-      alert('Please, insert some city');
-    }
+  // onSubmit(){
+  //   if(this.cityName){
+  //     this.getWeather(this.cityName);
+  //     this.cityName = '';
+  //   }
+  //   else{
+  //     alert('Please, insert some city');
+  //   }
     
-  }
+  // }
 
-  private getWeather(cityName: string){
-    this.wetherService.getWeatherData(cityName)
-    .subscribe(
-      res => {
-        console.log(res),
-        this.weather = res},
-      err => console.log(err)
-    );
-  }
+  // private getWeather(cityName: string){
+  //   this.wetherService.getWeatherData(cityName)
+  //   .subscribe(
+  //     res => {
+  //       console.log(res),
+  //       this.weather = res},
+  //     err => console.log(err)
+  //   );
+  // }
 }

@@ -1,0 +1,31 @@
+.weather-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-image: url('../../../images/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    width: 100%;
+}
+
+#blur {
+    backdrop-filter: blur(10px) !important;
+}
+
+.temp{
+    font-size: 60px;
+}
+
+.degree{
+    font-size: 25px;
+}
+
+.temperature{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}

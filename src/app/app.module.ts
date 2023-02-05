@@ -12,6 +12,8 @@ import { DataComponent } from './components/data/data.component';
 import { NextHourComponent } from './components/next-hour/next-hour.component';
 import { SunsetSunriseComponent } from './components/sunset-sunrise/sunset-sunrise.component';
 import { NextDayComponent } from './components/next-day/next-day.component';
+import { SearchComponent } from './components/search/search.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { NextDayComponent } from './components/next-day/next-day.component';
     DataComponent,
     NextHourComponent,
     SunsetSunriseComponent,
-    NextDayComponent
+    NextDayComponent,
+    SearchComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
