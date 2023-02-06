@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ForecastData } from 'src/app/models/forecast.model';
 import { ForecastService } from 'src/app/service/forecast.service';
 
 @Component({
@@ -8,22 +9,23 @@ import { ForecastService } from 'src/app/service/forecast.service';
 })
 export class NextHourComponent implements OnInit{
 
-  // constructor ( private forecastService: ForecastService) { }
+  constructor ( private forecastService: ForecastService) { }
 
-  // cityName: string = 'Chivilcoy';
-  // forecast: any;
-
+  cityName: string = 'Chivilcoy';
+  forecast!: ForecastData;
+  
   ngOnInit(){
-  //   this.getForecast(this.cityName);
+    this.getForecast(this.cityName);
   }
 
-  // private getForecast(cityName: string){
-  //   this.forecastService.getForecastData(cityName)
-  //   .subscribe(
-  //     res => {
-  //       console.log(res),
-  //       this.forecast = res},
-  //     err => console.log(err)
-  //   );
-  // }
+  private getForecast(cityName: string){
+    this.forecastService.getForecastData(cityName)
+    .subscribe(
+      res => {
+        console.log(res),
+        this.forecast = res},
+      err => console.log(err)
+    );  
+  }
+
 }

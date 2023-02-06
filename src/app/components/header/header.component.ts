@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherData } from 'src/app/models/weather.model';
 import { WeatherService } from 'src/app/service/weather.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class HeaderComponent implements OnInit{
 
   // constructor( private weatherService: WeatherService ) { }
 
-  // weather: any;
+  //weather!: WeatherData;
   // cityName: string = 'Chivilcoy';
   dateToday: Date = new Date();
 
