@@ -1,4 +1,7 @@
 .bg-carousel{
-    background-color: white;
+    background-color: #d3d3d3;
 }
 
+img{
+    height: 8vh;
+}

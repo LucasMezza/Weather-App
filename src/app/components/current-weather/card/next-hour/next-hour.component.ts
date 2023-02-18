@@ -13,11 +13,13 @@ export class NextHourComponent implements OnInit{
   
   forecast!: ForecastData;
   days!: any;
+  list!: any;
 
   ngOnInit(){
     this.dataService.getCurrentSearch().subscribe(
       data => {
         this.forecast = data;
+        this.list = data.list;
       }
     )
 
@@ -25,6 +27,6 @@ export class NextHourComponent implements OnInit{
   }
 
   getDays(){ 
-    this.forecast.list.forEach(obj => {this.days = obj.dt_txt} )
+    // this.forecast.list.forEach(obj => {this.days = obj.dt_txt} )
   }
 }

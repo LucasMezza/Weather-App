@@ -1,38 +1,38 @@
 <div class="container" *ngIf="forecast">
-    <table class="table table-borderless bg-forecast">
+    <table class="table table-borderless">
       <tbody class="text-center">
         <tr>
           <th>{{forecast.list[2].dt_txt | date:'EEEE d'}}</th>
           <th>{{forecast.list[2].main.humidity}}%</th>
-          <th><i class="bi bi-brightness-high"></i></th>
+          <th><img src="http://openweathermap.org/img/wn/{{forecast.list[2].weather[0].icon}}@2x.png" alt="weather icon"></th>
           <th>{{forecast.list[2].main.temp_min}} °C</th>
           <th>{{forecast.list[2].main.temp_max}} °C</th>
         </tr>
         <tr>
           <th>{{forecast.list[10].dt_txt | date:'EEEE d'}}</th>
           <th>{{forecast.list[10].main.humidity}}%</th>
-          <th><i class="bi bi-brightness-high"></i></th>
+          <th><img src="http://openweathermap.org/img/wn/{{forecast.list[10].weather[0].icon}}@2x.png" alt="weather icon"></th>
           <th>{{forecast.list[10].main.temp_min}} °C</th>
           <th>{{forecast.list[10].main.temp_max}} °C</th>
         </tr>
         <tr>
           <th>{{forecast.list[18].dt_txt | date:'EEEE d'}}</th>
           <th>{{forecast.list[18].main.humidity}}%</th>
-          <th><i class="bi bi-brightness-high"></i></th>
+          <th><img src="http://openweathermap.org/img/wn/{{forecast.list[18].weather[0].icon}}@2x.png" alt="weather icon"></th>
           <th>{{forecast.list[18].main.temp_min}} °C</th>
           <th>{{forecast.list[18].main.temp_max}} °C</th>
         </tr>
         <tr>
           <th>{{forecast.list[26].dt_txt | date:'EEEE d'}}</th>
           <th>{{forecast.list[26].main.humidity}}%</th>
-          <th><i class="bi bi-brightness-high"></i></th>
+          <th><img src="http://openweathermap.org/img/wn/{{forecast.list[26].weather[0].icon}}@2x.png" alt="weather icon"></th>
           <th>{{forecast.list[26].main.temp_min}} °C</th>
           <th>{{forecast.list[26].main.temp_max}} °C</th>
         </tr>
         <tr>
           <th>{{forecast.list[34].dt_txt | date:'EEEE d'}}</th>
           <th>{{forecast.list[34].main.humidity}}%</th>
-          <th><i class="bi bi-brightness-high"></i></th>
+          <th><img src="http://openweathermap.org/img/wn/{{forecast.list[34].weather[0].icon}}@2x.png" alt="weather icon"></th>
           <th>{{forecast.list[34].main.temp_min}} °C</th>
           <th>{{forecast.list[34].main.temp_max}} °C</th>
         </tr>

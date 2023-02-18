@@ -13,19 +13,27 @@ export class NextDayComponent {
   
   forecast!: ForecastData;
   days!: any;
+  list!: any;
 
   ngOnInit(){
     this.dataService.getCurrentSearch().subscribe(
       data => {
         this.forecast = data;
+        this.list = data.list;
       }
     )
 
     this.getDays();
+    console.log(this.days);
   }
   
   getDays(){ 
-    this.forecast.list.forEach(obj => {this.days = obj.dt_txt} )
+   //this.list.forEach((obj: { dt_txt: any; }) => {this.days = obj.dt_txt} )
+   //this.days = this.list.filter((day: { dt_txt: any; }) => day.dt_txt);
+  }
+
+  get5days(){
+    console.log(this.days);
   }
 
 }
