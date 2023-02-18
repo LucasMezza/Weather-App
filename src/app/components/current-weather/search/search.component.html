@@ -1,5 +1,5 @@
 <div class="container text-center mb-3 mt-3">
-    <form #form="ngForm" (submit)="onSubmit()">
+    <form #form="ngForm" (ngSubmit)="search()">
       <input class="search" type="text" placeholder="Search City" name="city" [(ngModel)]="cityName"/>
       <button type="submit" class="btn-search">
         <i class="bi bi-search" style="font-size: 17px;"></i>

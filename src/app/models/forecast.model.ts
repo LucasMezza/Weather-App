@@ -3,14 +3,14 @@ export interface ForecastData {
     cnt:  number;
     cod:  string;
     list: List[];
-    message: number;
+    message: number; 
 }
 
 export interface City {
     coord:      Coord;
     country:    string;
     id:         number;
-    name:       string;
+    name:       string; 
     population: number;
     sunrise:    number;
     sunset:     number;
@@ -25,7 +25,7 @@ export interface Coord {
 export interface List {
     clouds:     Clouds;
     dt:         number;
-    dt_txt:     Date;
+    dt_txt:     Date;     
     main:       Main;
     pop:        number;
     sys:        Sys;

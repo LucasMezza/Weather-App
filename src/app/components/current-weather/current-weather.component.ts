@@ -1,15 +1,30 @@
-import { Component} from '@angular/core';
-import { WeatherService } from 'src/app/service/weather.service';
+import { Component, OnInit} from '@angular/core';
+import { ForecastData } from 'src/app/models/forecast.model';
+import { ForecastService } from 'src/app/service/forecast.service';
 
 @Component({
   selector: 'app-current-weather',
   templateUrl: './current-weather.component.html',
   styleUrls: ['./current-weather.component.css']
 })
-export class CurrentWeatherComponent{
+export class CurrentWeatherComponent implements OnInit{
 
-  constructor(private wetherService: WeatherService) { }
+  constructor(private forecastService: ForecastService) { }
 
+  forecast!: ForecastData;
+
+  ngOnInit(): void {
+    
+  }
+
+  dataSearch(data: string){
+    this.forecastService.getForecastData(data).subscribe(
+      data => {
+        this.forecast = data;
+      }
+    )
+  }
+  
   // cityName: string = 'Chivilcoy';
   // weather: any;
   // forecast: any;

@@ -1,13 +1,13 @@
-<div class="container">
+<div class="container" *ngIf="forecast">
   <div class="row mt-5 mb-5" >
-    <!-- *ngIf="forecast" *ngFor="let hour in forecast.list[index]" -->
+    <!--*ngFor="let hour in forecast.list[index]" -->
       <div class="col-md-2">
         <div class="card  mb-3 bg-carousel">
           <div class="card-body text-center">
-            <h5 class="card-title"></h5>
+            <h5 class="card-title">{{forecast.list[0].dt_txt | date:'shortTime'}}</h5>
             <i class="bi bi-cloud"></i>
             <p class="card-text">
-              29 °C
+              {{forecast.list[0].main.temp}} °C
             </p>
           </div>
         </div>
@@ -15,10 +15,10 @@
       <div class="col-md-2">
         <div class="card  mb-3 bg-carousel">
           <div class="card-body text-center">
-            <h5 class="card-title">14:00</h5>
+            <h5 class="card-title">{{forecast.list[1].dt_txt | date:'shortTime'}}</h5>
             <i class="bi bi-cloud-lightning"></i>
             <p class="card-text">
-              31 °C
+              {{forecast.list[1].main.temp}} °C
             </p>
           </div>
         </div>
@@ -26,10 +26,10 @@
       <div class="col-md-2">
         <div class="card  mb-3 bg-carousel">
           <div class="card-body text-center">
-            <h5 class="card-title">17:00</h5>
+            <h5 class="card-title">{{forecast.list[2].dt_txt | date:'shortTime'}}</h5>
             <i class="bi bi-cloud-drizzle"></i>
             <p class="card-text">
-              34 °C
+              {{forecast.list[2].main.temp}} °C
             </p>
           </div>
         </div>
@@ -37,10 +37,10 @@
       <div class="col-md-2">
         <div class="card  mb-3 bg-carousel">
           <div class="card-body text-center">
-            <h5 class="card-title">20:00</h5>
+            <h5 class="card-title">{{forecast.list[3].dt_txt | date:'shortTime'}}</h5>
             <i class="bi bi-cloud-rain-heavy"></i>
             <p class="card-text">
-              36 °C
+              {{forecast.list[3].main.temp}} °C
             </p>
           </div>
         </div>
@@ -48,10 +48,10 @@
       <div class="col-md-2">
         <div class="card  mb-3 bg-carousel">
           <div class="card-body text-center">
-            <h5 class="card-title">23:00</h5>
+            <h5 class="card-title">{{forecast.list[4].dt_txt | date:'shortTime'}}</h5>
             <i class="bi bi-cloud-drizzle"></i>
             <p class="card-text">
-              29 °C
+              {{forecast.list[4].main.temp}} °C
             </p>
           </div>
         </div>
@@ -59,10 +59,10 @@
       <div class="col-md-2">
         <div class="card  mb-3 bg-carousel">
           <div class="card-body text-center">
-            <h5 class="card-title">2:00</h5>
+            <h5 class="card-title">{{forecast.list[5].dt_txt | date:'shortTime'}}</h5>
             <i class="bi bi-cloud-lightning-rain"></i>
             <p class="card-text">
-              29 °C
+              {{forecast.list[5].main.temp}} °C
             </p>
           </div>
         </div>
@@ -70,10 +70,10 @@
       <div class="col-md-2">
         <div class="card  mb-3 bg-carousel">
           <div class="card-body text-center">
-            <h5 class="card-title">5:00</h5>
+            <h5 class="card-title">{{forecast.list[6].dt_txt | date:'shortTime'}}</h5>
             <i class="bi bi-clouds"></i>
             <p class="card-text">
-              31 °C
+              {{forecast.list[6].main.temp}} °C
             </p>
           </div>
         </div>
@@ -81,10 +81,10 @@
       <div class="col-md-2">
         <div class="card  mb-3 bg-carousel">
           <div class="card-body text-center">
-            <h5 class="card-title">8:00</h5>
+            <h5 class="card-title">{{forecast.list[7].dt_txt | date:'shortTime'}}</h5>
             <i class="bi bi-brightness-high"></i>
             <p class="card-text">
-              34 °C
+              {{forecast.list[7].main.temp}} °C
             </p>
           </div>
         </div>
@@ -92,10 +92,10 @@
       <div class="col-md-2">
         <div class="card  mb-3 bg-carousel">
           <div class="card-body text-center">
-            <h5 class="card-title">11:00</h5>
+            <h5 class="card-title">{{forecast.list[8].dt_txt | date:'shortTime'}}</h5>
             <i class="bi bi-brightness-high"></i>
             <p class="card-text">
-              30 °C
+              {{forecast.list[8].main.temp}} °C
             </p>
           </div>
         </div>
@@ -103,10 +103,10 @@
       <div class="col-md-2">
         <div class="card  mb-3 bg-carousel">
           <div class="card-body text-center">
-            <h5 class="card-title">11:00</h5>
+            <h5 class="card-title">{{forecast.list[9].dt_txt | date:'shortTime'}}</h5>
             <i class="bi bi-cloud"></i>
             <p class="card-text">
-              29 °C
+              {{forecast.list[9].main.temp}} °C
             </p>
           </div>
         </div>
@@ -114,10 +114,10 @@
       <div class="col-md-2">
         <div class="card  mb-3 bg-carousel">
           <div class="card-body text-center">
-            <h5 class="card-title">11:00</h5>
+            <h5 class="card-title">{{forecast.list[10].dt_txt | date:'shortTime'}}</h5>
             <i class="bi bi-cloud"></i>
             <p class="card-text">
-              29 °C
+              {{forecast.list[10].main.temp}} °C
             </p>
           </div>
         </div>
@@ -125,10 +125,10 @@
       <div class="col-md-2">
         <div class="card  mb-3 bg-carousel">
           <div class="card-body text-center">
-            <h5 class="card-title">14:00</h5>
+            <h5 class="card-title">{{forecast.list[11].dt_txt | date:'shortTime'}}</h5>
             <i class="bi bi-cloud-lightning"></i>
             <p class="card-text">
-              31 °C
+              {{forecast.list[11].main.temp}} °C
             </p>
           </div>
         </div>
