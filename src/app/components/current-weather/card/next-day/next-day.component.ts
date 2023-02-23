@@ -12,28 +12,26 @@ export class NextDayComponent {
   constructor( private dataService : DataService ) { }
   
   forecast!: ForecastData;
-  days!: any;
-  list!: any;
+  days: any = [];
+  list: any = [];
 
   ngOnInit(){
     this.dataService.getCurrentSearch().subscribe(
       data => {
         this.forecast = data;
         this.list = data.list;
+        this.getDays();
       }
     )
-
-    this.getDays();
-    console.log(this.days);
   }
   
   getDays(){ 
-   //this.list.forEach((obj: { dt_txt: any; }) => {this.days = obj.dt_txt} )
-   //this.days = this.list.filter((day: { dt_txt: any; }) => day.dt_txt);
+    this.days = [];
+    const pivot = this.list[4].dt_txt.split(" ")[1];
+    this.list.forEach((list: any) => {
+    if( list.dt_txt.split(" ")[1] === pivot){
+      this.days.push(list);
+    }
+    } )
   }
-
-  get5days(){
-    console.log(this.days);
-  }
-
 }

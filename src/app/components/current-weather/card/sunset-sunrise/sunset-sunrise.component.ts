@@ -12,28 +12,20 @@ export class SunsetSunriseComponent implements OnInit{
 
   constructor( private dataService : DataService ) { }
 
-  sunrise!: number;  
-  sunset!: number;
-  rodri!: string;
+  sunrise!: string;  
+  sunset!: string;
   forecast!: ForecastData;
  
   ngOnInit(){
     this.dataService.getCurrentSearch().subscribe(
       data => {
         this.forecast = data;
-        this.sunrise = data.city.sunrise;
-        this.sunset = data.city.sunset;
         console.log(data.city.sunset);
+        this.sunrise = this.convertMillisecondsToHours(data.city.sunrise);
+        this.sunset = this.convertMillisecondsToHours(data.city.sunset);
       }
     );
-
-    this.rodri = this.convertMillisecondsToHours(this.sunrise);
-    //this.sunset = this.convertMillisecondsToHours(1676674357);
-    console.log(this.sunrise);
-    console.log("hola", this.rodri)
   }
-
-   
 
   convertMillisecondsToHours( milliseconds: number){
     return new Date(milliseconds).toLocaleTimeString('en-US', { 
@@ -43,8 +35,5 @@ export class SunsetSunriseComponent implements OnInit{
   }
 }
 
-// 1676626551
-
-// 1676674357
 
 
