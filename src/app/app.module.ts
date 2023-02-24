@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/current-weather/card/header/header.component';
 import { DataComponent } from './components/current-weather/card/data/data.component';
@@ -14,6 +14,7 @@ import { SunsetSunriseComponent } from './components/current-weather/card/sunset
 import { NextDayComponent } from './components/current-weather/card/next-day/next-day.component';
 import { SearchComponent } from './components/current-weather/search/search.component';
 import { CardComponent } from './components/current-weather/card/card.component';
+import { ErrorInterceptorService } from './interceptors/error-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { CardComponent } from './components/current-weather/card/card.component'
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorService, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
