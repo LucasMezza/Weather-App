@@ -11,10 +11,6 @@
     width: 100%;
 }
 
-#blur {
-    backdrop-filter: blur(10px) !important;
-}
-
 .temp{
     font-size: 60px;
 }
