@@ -15,6 +15,8 @@ import { NextDayComponent } from './components/current-weather/card/next-day/nex
 import { SearchComponent } from './components/current-weather/search/search.component';
 import { CardComponent } from './components/current-weather/card/card.component';
 import { ErrorInterceptorService } from './interceptors/error-interceptor.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ErrorInterceptorService } from './interceptors/error-interceptor.servic
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorService, multi: true }

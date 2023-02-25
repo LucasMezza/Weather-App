@@ -20,7 +20,8 @@ export class ErrorInterceptorService implements HttpInterceptor {
                 errorMessage = `Client-side error: ${error.error.message}`;
                 } else {
                 // backend error
-                errorMessage = `Server-side error: ${error.status} ${error.message}`;
+                errorMessage = `Server-side error: ${error.status} 
+                ${error.message}`;
                 }
                 // aquí podrías agregar código que muestre el error en alguna parte fija de la pantalla.
                 this.errorService.showInToast(errorMessage);
@@ -28,5 +29,5 @@ export class ErrorInterceptorService implements HttpInterceptor {
                 return throwError(errorMessage);
             })
         );
-}
+    }
 }

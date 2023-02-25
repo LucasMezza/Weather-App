@@ -1,24 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
-import { ToastEvent } from '../models/toast-event.model';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ErrorService {
 
-  toastEvents: Observable<ToastEvent>;
-  private _toastEvents = new Subject<ToastEvent>();
-
-  constructor() {
-    this.toastEvents = this._toastEvents.asObservable();
-  }
+  constructor( private toastr: ToastrService) { }
 
   showInToast(message: string) {
-    this._toastEvents.next({
-      message,
-      title: 'Error',
-      type: 'success',
-    });
+    this.toastr.error(message, 'Error message');
   }
 }
